@@ -64,7 +64,7 @@ html(lang="en")
     nav.navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
-          a.navbar-brand(href="/") Welcome
+          a.navbar-brand(href="/") rpgboss engine
         ul.nav.navbar-nav
           each doc in getCollection('pages').toJSON()
             - clazz = (document.url === doc.url) ? 'active' : null
@@ -74,8 +74,6 @@ html(lang="en")
       section#content.content!= content
       hr
       footer
-        div= site.copyright
-        div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}
 
     // Scripts
     != scripts.toHTML()

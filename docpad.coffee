@@ -12,35 +12,35 @@ docpadConfig =
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://website.com"
+      url: "http://rpgboss.com"
 
       # Here are some old site urls that you would like to redirect from
       oldUrls: [
-        'www.website.com',
+        'www.rpgboss.com',
         'website.herokuapp.com'
       ]
 
       # The default title of our website
-      title: "Your Website"
+      title: "rpgboss engine"
 
       # The website description (for SEO)
       description: """
-        When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+        An open source RPG engine and creation tool targetting multiple platforms.
         """
 
       # The website keywords (for SEO) separated by commas
       keywords: """
-        place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+        rpg, game, engine, creation, maker, tool, android, mobile, windows
         """
 
       # The website author's name
-      author: "Your Name"
+      author: "Tommy Li"
 
       # The website author's email
-      email: "your@email.com"
+      email: "tommycli@keepword.com"
 
       # Your company's name
-      copyright: "© Your Company 2013"
+      copyright: "rpgboss"
 
 
     # Helper Functions

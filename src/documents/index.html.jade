@@ -5,19 +5,25 @@ title: 'Home'
 
 // Main hero unit for a primary marketing message or call to action.
 .jumbotron
-  h1 Welcome to your new site!
-  p: :markdown
-    We've copied over the [Twitter Bootstrap Skeleton](https://github.com/docpad/twitter-bootstrap.docpad) for you already, which is what you're currently viewing.
-    <br>
-    Step through the guide below and we'll walk you through the process of working with your first docpad website :-)
+  .row
+    .col-md-4
+      h1 rpgboss
+      p Make your own RPG.
+      ul
+        li No coding required
+        li Side view battle system
+        li Multi platform
+      p: a.btn.btn-primary(href="/binaries/rpgboss-editor.exe") Download v0.1 - Windows
+      p: a.btn.btn-default(href="/binaries/rpgboss-editor-linux.tar.gz") Download v0.1 - Linux/Mac
+    .col-md-8
+      p <iframe width="640" height="380" src="//www.youtube.com/embed/XXlUY7t-deA?rel=0&showinfo=0&modestbranding=1&start=22" frameborder="0" allowfullscreen=""></iframe>
 
 // Example row of columns.
 .row
   .col-md-6
-    h2 Docpad
-    p DocPad takes that good ol' simple approach of writing files and wraps it with the best modern innovations, providing an awesome intuitive, liberating and empowering solution for HTML5 web development.</p>
-    p: a.btn.btn-default(href="https://github.com/bevry/docpad") Visit Website
+    h2 Open-source
+    p rpgboss is open source and welcomes contributions: art, music, sonud effects, code, documentation, or anything else that would be useful.
+    p: a.btn.btn-default(href="https://github.com/tommycli/rpgboss") Source on Github
   .col-md-6
-    h2 Twitter Bootstrap
-    p Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-    p: a.btn.btn-default(href="http://twitter.github.com/bootstrap/") Visit Website
+    h2 Changelog
+    p v0.1 - Alpha Tech Demo
