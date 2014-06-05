@@ -42,6 +42,7 @@ docpadConfig =
       # Your company's name
       copyright: "rpgboss"
 
+      binaryversion: "0.1-SNAPSHOT"
 
     # Helper Functions
     # ----------------
