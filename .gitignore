@@ -1,4 +1,5 @@
 node_modules/
+src/files/binaries
 out/
 .idea/
 .DS_Store
