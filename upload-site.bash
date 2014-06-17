@@ -12,7 +12,9 @@ done
 SRC_DIR=$(cd "$(dirname "$0")"; pwd)
 
 if [ -n "$MAKEBINARY" ]; then
-  $SRC_DIR/../rpgboss/package/package.sh
+  cd $SRC_DIR/../rpgboss
+  sbt test
+  ./package/package.sh
   mkdir -p $SRC_DIR/src/files/binaries
   rsync -avz $SRC_DIR/../rpgboss/package/target/* $SRC_DIR/src/files/binaries
 fi
