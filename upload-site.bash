@@ -19,6 +19,9 @@ if [ -n "$MAKEBINARY" ]; then
   rsync -avz $SRC_DIR/../rpgboss/package/target/* $SRC_DIR/src/files/binaries
 fi
 
+cd $SRC_DIR
+
+docpad update
 docpad generate --env static
 
 rsync -avz --progress -e ssh $SRC_DIR/out/* mathim.com:/home/tommycli/rpgboss
