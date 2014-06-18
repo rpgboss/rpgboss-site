@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "bower": "~1",
-    "docpad": "~6.68.1",
+    "docpad": "~6.69.0",
     "docpad-plugin-cleanurls": "~2.7.0",
     "docpad-plugin-coffeescript": "~2.4.0",
     "docpad-plugin-eco": "~2.0.3",
