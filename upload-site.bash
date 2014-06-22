@@ -15,6 +15,7 @@ if [ -n "$MAKEBINARY" ]; then
   cd $SRC_DIR/../rpgboss
   sbt test
   ./package/package.sh
+  rm -rf $SRC_DIR/src/files/binaries
   mkdir -p $SRC_DIR/src/files/binaries
   rsync -avz $SRC_DIR/../rpgboss/package/target/* $SRC_DIR/src/files/binaries
 fi
