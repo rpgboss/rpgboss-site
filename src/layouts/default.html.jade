@@ -79,6 +79,8 @@ html(lang="en")
             a(href="https://github.com/tommycli/rpgboss") Get the Source
           li
             a(href="https://github.com/tommycli/rpgboss/issues") Bug Tracker
+          li
+            a(href="https://twitter.com/intent/user?screen_name=RpgbossEditor") Follow @RpgbossEditor
           each doc in getCollection('pages').toJSON()
             - clazz = (document.url === doc.url) ? 'active' : null
             li(typeof="sioc:Page", about=doc.url, class=clazz)
