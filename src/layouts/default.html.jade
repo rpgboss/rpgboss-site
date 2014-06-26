@@ -81,6 +81,8 @@ html(lang="en")
             a(href="https://github.com/tommycli/rpgboss/issues") Bug Tracker
           li
             a(href="https://twitter.com/intent/user?screen_name=RpgbossEditor") Follow @RpgbossEditor
+          li
+            a(href="http://www.reddit.com/r/gamedev/comments/28xhua/rpgboss_open_source_2d_jrpg_editorengine/") Reddit discussion
           each doc in getCollection('pages').toJSON()
             - clazz = (document.url === doc.url) ? 'active' : null
             li(typeof="sioc:Page", about=doc.url, class=clazz)
