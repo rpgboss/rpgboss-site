@@ -30,10 +30,10 @@
   },
   "dependencies": {
     "bower": "~1",
-    "docpad": "~6.69.0",
+    "docpad": "~6.69.1",
     "docpad-plugin-cleanurls": "~2.7.0",
     "docpad-plugin-coffeescript": "~2.4.0",
-    "docpad-plugin-eco": "~2.0.3",
+    "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-jade": "~2.7.0",
     "docpad-plugin-less": "~2.4.1",
     "docpad-plugin-marked": "~2.2.1",
