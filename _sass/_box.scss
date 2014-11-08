@@ -15,3 +15,43 @@
 	padding:0;
 	padding-bottom:15px;
 }
+
+.feed {
+	border-bottom:1px solid $lightgray;
+	padding: 5px 0;
+	margin: 10px 0;
+}
+
+.feed.last {
+	border:none;
+}
+
+.feed .title {
+	width:100%;
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.feed .title a {
+	font-size:14px;
+	color:$gray;
+	font-weight:400;
+  text-decoration:none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.feed .title a:hover {
+	color: $black;
+}
+
+.feed .author a {
+	font-size:14px;
+	color:$orange;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.feed .author a:hover {
+	color: $lightorange;
+}

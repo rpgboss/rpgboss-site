@@ -24,8 +24,7 @@
 <script>
 	$(function() {
 		$.ajax({
-			url : 'https://github.com/rpgboss/rpgboss/commits/master.atom',
-			dataType: "feed",
+			url : 'feed.php',
 			success : function(data) {
 				var data = $($.parseXML(data)),
 						entries = data.find('entry'),
@@ -36,22 +35,29 @@
 					if(counter<=2) {
 						var entry = $(data),
 							  feed = $('<div>',{'class':'feed row'}),
-								feedcol1 = $('<div>',{'class':'col-md-4'}),
-								feedcol2 = $('<div>',{'class':'col-md-8'}),
+								feedcol1 = $('<div>',{'class':'col-md-2'}),
+								feedcol2 = $('<div>',{'class':'col-md-10'}),
 								feedtitle = $('<div>',{'class':'title'}),
 								feedmedia = $('<div>',{'class':'media'}),
 								feedauthor = $('<div>',{'class':'author'});
+
+						if(counter==2) feed.addClass('last');
 
 						feed.append(feedcol1,feedcol2);
 						feedcol1.append(feedmedia);
 						feedcol2.append(feedtitle, feedauthor);
 
-						feedtitle.text($(data).find('title').text());
+						var link = $(data).find('link');
+
+						feedtitle.append($('<a>',{'target':'_blank','href':link.attr('href')}).text($(data).find('title').text()));
 
 						var author = $(data).find('author'),
 								name = author.find('name').text(),
 								uri = author.find('uri').text();
-						feedauthor.text(name);
+						feedauthor.append($('<a>',{'target':'_blank','href':uri}).text(name));
+
+						var thumb = $(data).find('thumbnail');
+						feedmedia.append($('<img>',{'src':thumb.attr('url')}));
 
 						feeds.append(feed);
 					}
