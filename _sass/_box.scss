@@ -1,0 +1,17 @@
+.box-container {
+	margin: 30px auto;
+}
+
+.box {
+	border:1px solid $lightgray;
+	padding:15px;
+	height:260px;
+}
+
+.box h1 {
+	font-size:26px;
+	color: $orange;
+	margin:0;
+	padding:0;
+	padding-bottom:15px;
+}
