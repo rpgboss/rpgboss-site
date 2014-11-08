@@ -9,3 +9,5 @@ rpgboss-site
 
 3. Upload.
 ```upload-site.bash```
+
+Design by hendrik-weiler.
