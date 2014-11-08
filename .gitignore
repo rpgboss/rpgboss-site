@@ -1,9 +1,2 @@
-node_modules/
-src/files/binaries
-out/
-.idea/
-.DS_Store
-*.iml
-src/files/vendor/components-bootstrap
-src/files/vendor/jquery
-.docpad.db
+_site
+.sass-cache

@@ -1,0 +1,69 @@
+<div class="container box-container">
+	<div class="col-md-4">
+		<div class="box">
+			<h1>Download latest Version</h1>
+			<a href="" class="button full icon icon-windows">Download for Windows</a>
+			<a href="" class="button full icon icon-osx">Download for OSX</a>
+			<a href="" class="button full icon icon-linux">Download for Linux</a>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="box">
+			<h1>Social Networks</h1>
+			<a class="icon-link" target="_blank" href="https://twitter.com/RpgbossEditor"><img src="/images/twitter.png" alt=""> Twitter</a>
+			<a class="icon-link" target="_blank" href=""><img src="/images/facebook.png" alt=""> Facebook</a>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="box">
+			<h1>Latest Activities</h1>
+			<div id="feeds"></div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function() {
+		$.ajax({
+			url : 'feed.php',
+			success : function(data) {
+				var data = $($.parseXML(data)),
+						entries = data.find('entry'),
+						feeds = $('#feeds'),
+						counter = 0;
+
+				$.each(entries, function(key, data) {
+					if(counter<=2) {
+						var entry = $(data),
+							  feed = $('<div>',{'class':'feed row'}),
+								feedcol1 = $('<div>',{'class':'col-md-2'}),
+								feedcol2 = $('<div>',{'class':'col-md-10'}),
+								feedtitle = $('<div>',{'class':'title'}),
+								feedmedia = $('<div>',{'class':'media'}),
+								feedauthor = $('<div>',{'class':'author'});
+
+						if(counter==2) feed.addClass('last');
+
+						feed.append(feedcol1,feedcol2);
+						feedcol1.append(feedmedia);
+						feedcol2.append(feedtitle, feedauthor);
+
+						var link = $(data).find('link');
+
+						feedtitle.append($('<a>',{'target':'_blank','href':link.attr('href')}).text($(data).find('title').text()));
+
+						var author = $(data).find('author'),
+								name = author.find('name').text(),
+								uri = author.find('uri').text();
+						feedauthor.append($('<a>',{'target':'_blank','href':uri}).text(name));
+
+						var thumb = $(data).find('thumbnail');
+						feedmedia.append($('<img>',{'src':thumb.attr('url')}));
+
+						feeds.append(feed);
+					}
+					++counter;
+				});
+		}
+		});
+	});
+</script>

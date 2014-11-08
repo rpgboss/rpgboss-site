@@ -1,0 +1,14 @@
+<footer class="footer">
+  <div class="container">
+  2014 © rpgboss.com
+  </div>
+</footer>
+<script type="text/javascript">
+$(document).ready(function() {
+  var bodyHeight = $("body").height();
+  var vwptHeight = $(window).height();
+  if (vwptHeight > bodyHeight) {
+    $("footer").css("position","absolute").css("bottom",0);
+  }
+});
+</script>
