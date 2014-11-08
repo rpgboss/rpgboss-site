@@ -3,4 +3,4 @@ set -e
 
 jekyll build
 
-rsync -avz --progress --delete -e ssh $SRC_DIR/_site/* mathim.com:/home/tommycli/rpgboss
+rsync -avz --progress --delete-before -e ssh $SRC_DIR/_site/* mathim.com:/home/tommycli/rpgboss
