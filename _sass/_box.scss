@@ -33,6 +33,10 @@
   text-overflow: ellipsis;
 }
 
+.feed .media img {
+	width:30px;
+}
+
 .feed .title a {
 	font-size:14px;
 	color:$gray;
