@@ -29,10 +29,39 @@ h1 {
 
 .footer {
     width: 100%;
-    background-color: $orange;
+    background-color: $gray;
     color: $white;
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
     margin-top: 90px;
+}
+
+.backgroundimage {
+  background: url(../images/screen.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 600px
+}
+
+.layer {
+    background:$orange;
+    opacity:0.9;
+    position:absolute;
+    top:0;
+    left:0;
+    height:600px;
+    width:100%;
+    z-index:2;
+}
+
+.layer2 {
+    position:absolute;
+    top:0;
+    left:0;
+    height:600px;
+    width:100%;
+    z-index:3;
 }

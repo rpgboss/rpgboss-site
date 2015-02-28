@@ -9,10 +9,20 @@
   transition: all 0.3s ease;
 }
 
+.button.gray {
+	background:$lightgray;
+	color:$gray;
+}
+
 .button:hover {
 	color: $white;
 	text-decoration:none;
   background: $lightorange;
+}
+
+.button.gray:hover {
+  background: #cecece;
+  color:$black;
 }
 
 .button.full {
