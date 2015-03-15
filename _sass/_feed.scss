@@ -1,0 +1,47 @@
+.feed {
+  padding: 5px 0;
+  margin: 30px 0;
+}
+
+.feed.last {
+  border:none;
+}
+
+.feed .title {
+  width:100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.feed .media img {
+  width:30px;
+}
+
+.feed .title a {
+  font-size:14px;
+  color:$gray;
+  font-weight:400;
+  text-decoration:none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.feed .title a:hover {
+  color: $black;
+}
+
+.feed .author a {
+  font-size:14px;
+  color:$orange;
+  text-decoration:none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.feed .author a:hover {
+  color: $lightorange;
+}
+
+.feed .date {
+  font-size: 12px;
+  color: $lightgray;
+}

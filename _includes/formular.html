@@ -1,0 +1,54 @@
+<div class="container formular" ng-controller="FormController">
+    <div class="row">
+        <h2>Interested in contributing to the project?</h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 text">
+            <strong>How can i contribute?</strong>
+            <br/><br/>
+            <p>There are several ways to do so</p>
+            <ul>
+                <li>Translation of the editor</li>
+                <li>Adding new features to the editor</li>
+                <li>Improving the webbased technologies  (asset server, cooperation server)</li>
+                <li>Spread the word about RPGBOSS</li>
+                <li>Show us a new way to contribute!</li>
+            </ul>
+            <p>Since the project is hosted on github you can fork it and modify the sourcecode.</p>
+        </div>
+
+        <div class="col-xs-6 form">
+            <form name="contact" novalidate="novalidate" ng-submit="send()">
+                <input ng-model="name" type="text" required placeholder="Your name" class="textbox"/>
+                <div ng-show="contact.$submitted || contact.name.$touched">
+                    <span ng-show="contact.name.$error.required">This field is required.</span>
+                </div>
+                <input ng-model="email" type="email" required placeholder="Your email" class="textbox"/>
+                <div ng-show="contact.$submitted || contact.email.$touched">
+                    <span ng-show="contact.email.$error.required">This field is required.</span>
+                </div>
+                <textarea ng-model="text" required placeholder="Your text" class="textbox" name="" id="" cols="30" rows="10"></textarea>
+                <div ng-show="contact.$submitted || contact.text.$touched">
+                    <span ng-show="contact.text.$error.required">This field is required.</span>
+                </div>
+                <input class="button gray" type="submit" value="Send"/>
+                <br/><br/>
+                <div ng-show="wasSent" class="notice">
+                    Thank you. The mail was sent.
+                </div>
+                <br/><br/><br/>
+                <div class="row social">
+                    <div class="col-xs-4 orange icon">
+                        Follow us
+                    </div>
+                    <div class="col-xs-4 icon">
+                        <a href="#"><img src="images/twitter.png" alt=""/> Twitter</a>
+                    </div>
+                    <div class="col-xs-4 icon">
+                        <a href="#"><img src="images/facebook.png" alt=""/> Facebook</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

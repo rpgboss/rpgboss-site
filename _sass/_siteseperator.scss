@@ -1,0 +1,13 @@
+.site-seperator {
+  background: url("../images/seperator-dot.png") repeat-x;
+  background-position: left 10px;
+  text-align: center;
+  margin: 100px 0;
+  span {
+    background: $white;
+    padding: 0 10%;
+    font-weight: 300;
+    font-size: 36px;
+    color: $orange;
+  }
+}

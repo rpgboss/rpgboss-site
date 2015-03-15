@@ -7,9 +7,35 @@
 
     {% include header.html %}
 
-    {% include boxes.html %}
+    {% include site-seperator.html text="Why RPGBOSS?" hash="why" %}
+
+    <div class="container">
+
+    {% include 1-2-feature.html text="Even as non-programmer you can create your game with a simple command base structure." headline="No coding required" image="coding.png" %}
+
+    {% include 1-2-feature.html text="Work on your game everywhere you go. Optimized for Windows, OSX and Linux to maximize your productivity." headline="Cross Platform" image="cross-platform.png" %}
+
+    {% include 1-2-feature.html text="Since battle systems in games are a common thing, we decided to include one of the most popular directly full configurable into the editor." headline="Side-View Battle System" image="sideview-battlesystem.png" %}
+
+    {% include 1-2-feature.html text="As developer of your game you want to maximize the reach where the players can enjoy your game. So with that in mind RPGBOSS is able to export to multiple operating systems like Windows, OSX and Linux." headline="Export to multiple Platforms" image="export.png" %}
+
+    </div>
+
+    <div class="container">
+
+    {% include latest-activities.html %}
+
+    </div>
+
+    {% include site-seperator.html text="Features" hash="features" %}
 
     {% include features.html %}
+
+    {% include site-seperator.html text="Get in touch" hash="getintouch" %}
+
+    {% include boxes.html %}
+
+    {% include formular.html %}
 
     {% include footer.html %}
 

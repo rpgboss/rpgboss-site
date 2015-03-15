@@ -1,0 +1,15 @@
+[Sat Mar 14 05:28:53 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 6612 to 2280 : URL /index.html
+[Sat Mar 14 05:28:53 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 114011 to 18736 : URL /css/bootstrap.min.css, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:28:53 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 19199 to 2280 : URL /css/bootstrap-theme.min.css, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:28:54 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 3836 to 1175 : URL /css/jquery.bxslider.css, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:28:55 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 3952 to 986 : URL /css/main.css, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:28:56 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 84245 to 29479 : URL /js/jquery.min.js, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:28:57 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 19359 to 5144 : URL /js/jquery.bxslider.min.js, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:28:57 2015] [error] [client 88.68.235.93] File does not exist: /home/root/rpgboss-site/_site/css/images, referer: http://rpgboss.hendrikweiler.com/css/jquery.bxslider.css
+[Sat Mar 14 05:28:57 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 313 to 239 : URL /css/images/bx_loader.gif, referer: http://rpgboss.hendrikweiler.com/css/jquery.bxslider.css
+[Sat Mar 14 05:28:58 2015] [error] [client 88.68.235.93] File does not exist: /home/root/rpgboss-site/_site/favicon.ico
+[Sat Mar 14 05:28:58 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 300 to 228 : URL /favicon.ico
+[Sat Mar 14 05:28:58 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 15258 to 2037 : URL /feed.php, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:29:00 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 15258 to 2037 : URL /feed.php, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:29:01 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 15258 to 2037 : URL /feed.php, referer: http://rpgboss.hendrikweiler.com/
+[Sat Mar 14 05:29:01 2015] [debug] mod_deflate.c(700): [client 88.68.235.93] Zlib: Compressed 15258 to 2037 : URL /feed.php, referer: http://rpgboss.hendrikweiler.com/
