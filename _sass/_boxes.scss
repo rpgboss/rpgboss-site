@@ -1,0 +1,18 @@
+.boxes {
+
+  .box {
+    .image, .text {
+      margin-top: 25px;
+    }
+
+    .text {
+      padding-top: 50px;
+    }
+
+    .text a {
+      font-size: 20px;
+      color: $black;
+    }
+  }
+
+}

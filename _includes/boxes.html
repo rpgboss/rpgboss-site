@@ -1,69 +1,49 @@
-<div class="container box-container">
-	<div class="col-md-4">
-		<div class="box">
-			<h1>Additional links</h1>
-			<a class="button full gray" href="https://github.com/rpgboss/rpgboss/wiki/For-New--Developers">For new developers</a>
-			<a class="button full gray" href="https://github.com/rpgboss/rpgboss/wiki/Developers:-Adding-an-EventCmd">Adding a event command</a>
-			<a class="button full gray" href="https://github.com/rpgboss/rpgboss/wiki/Making-a-New-Release">Making a new release</a>
-		</div>
+<div class="container boxes box-container">
+	<div class="row">
+		<h2>Interested in becoming part of the RPGBOSS community?</h2>
 	</div>
-	<div class="col-md-4">
-		<div class="box">
-			<h1>Social Networks</h1>
-			<a class="icon-link" target="_blank" href="https://twitter.com/RpgbossEditor"><img src="/images/twitter.png" alt=""> Twitter</a>
-			<a class="icon-link" target="_blank" href="https://www.facebook.com/rpgbosseditor"><img src="/images/facebook.png" alt=""> Facebook</a>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="box">
+				<h1>Want the source code?</h1>
+				<div class="row">
+					<div class="col-xs-6 image">
+						<img src="images/sourecode.png" alt=""/>
+					</div>
+					<div class="col-xs-6 text">
+						<a target="_blank" href="https://github.com/rpgboss/rpgboss">Get it now!</a>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="box">
-			<h1>Latest Activities</h1>
-			<div id="feeds"></div>
+		<div class="col-md-4">
+			<div class="box">
+				<h1>Found an error?</h1>
+
+				<div class="row">
+					<div class="col-xs-6 image">
+						<img src="images/bug.png" alt=""/>
+					</div>
+					<div class="col-xs-6 text">
+						<a target="_blank" href="https://github.com/rpgboss/rpgboss/issues">Message us!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="box">
+				<h1>Want to tell something?</h1>
+
+				<div class="row">
+					<div class="col-xs-6 image">
+						<img src="images/forum.png" alt=""/>
+					</div>
+					<div class="col-xs-6 text">
+						<a target="_blank" href="http://rpgboss.forumatic.com/">To the forum!</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
-<script>
-	$(function() {
-		$.ajax({
-			url : 'feed.php',
-			success : function(data) {
-				var data = $($.parseXML(data)),
-						entries = data.find('entry'),
-						feeds = $('#feeds'),
-						counter = 0;
 
-				$.each(entries, function(key, data) {
-					if(counter<=2) {
-						var entry = $(data),
-							  feed = $('<div>',{'class':'feed row'}),
-								feedcol1 = $('<div>',{'class':'col-md-2'}),
-								feedcol2 = $('<div>',{'class':'col-md-10'}),
-								feedtitle = $('<div>',{'class':'title'}),
-								feedmedia = $('<div>',{'class':'media'}),
-								feedauthor = $('<div>',{'class':'author'});
-
-						if(counter==2) feed.addClass('last');
-
-						feed.append(feedcol1,feedcol2);
-						feedcol1.append(feedmedia);
-						feedcol2.append(feedtitle, feedauthor);
-
-						var link = $(data).find('link');
-
-						feedtitle.append($('<a>',{'target':'_blank','href':link.attr('href')}).text($(data).find('title').text()));
-
-						var author = $(data).find('author'),
-								name = author.find('name').text(),
-								uri = author.find('uri').text();
-						feedauthor.append($('<a>',{'target':'_blank','href':uri}).text(name));
-
-						var thumb = $(data).find('thumbnail');
-						feedmedia.append($('<img>',{'src':thumb.attr('url')}));
-
-						feeds.append(feed);
-					}
-					++counter;
-				});
-		}
-		});
-	});
-</script>

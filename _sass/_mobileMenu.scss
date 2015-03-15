@@ -1,0 +1,44 @@
+.mobileMenu {
+  position: fixed;
+  top: 0%;
+  left: -100%;
+  width: 100%;
+  background: $white;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1100;
+
+  &.show {
+    left: -20%;
+  }
+
+  a {
+    font-size: 2em;
+    color: $orange;
+    display: block;
+    padding: 10px 0;
+    padding-left: 3em;
+  }
+
+}
+
+.mobilenavigation {
+  width: 100%;
+  text-align: right;
+  padding: 20px 0;
+  padding-right: 15px;
+  
+  img {
+    width: 40px;
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: $white;
+    z-index: 1050;
+  }
+}

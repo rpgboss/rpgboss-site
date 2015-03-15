@@ -1,0 +1,56 @@
+@media all and (max-width:600px) {
+  .header .logo img,
+  .header .bigimage img {
+    width: 100%;
+  }
+  .container {
+    width: 100% !important;
+  }
+
+  .buttonleft,
+  .buttonright {
+    width:100%;
+    text-align: center !important;
+    margin:20px 0;
+  }
+
+  .header .buttonleft a,
+  .header .buttonright a {
+    float:none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .halffeature {
+    width: 100%;
+
+    .icon,
+    .col-xs-10,
+    .col-xs-2 {
+      width: 100%;
+    }
+
+    .col-xs-10 {
+      text-align: center;
+    }
+  }
+
+  .boxes .box {
+    margin: 50px 0;
+  }
+
+  .formular {
+    .text,.form {
+      width: 100%;
+      margin: 50px 0;
+    }
+    
+    .form img {
+      display: block;
+    }
+  }
+
+  #feeds .col-xs-4 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,69 @@
+<div class="latest-activities">
+    <h1>Latest Activities</h1>
+    <div id="feeds" class="row">
+
+        <div class="col-xs-4">
+            <div id="feed1"></div>
+            <div id="feed2"></div>
+        </div>
+        <div class="col-xs-4">
+            <div id="feed3"></div>
+            <div id="feed4"></div>
+        </div>
+        <div class="col-xs-4">
+            <div id="feed5"></div>
+            <div id="feed6"></div>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(function() {
+        $.ajax({
+            url : 'feed.php',
+            success : function(data) {
+                var data = $($.parseXML(data)),
+                        entries = data.find('entry'),
+                        feeds = $('#feeds'),
+                        counter = 0;
+
+                $.each(entries, function(key, data) {
+                    if(counter<=6) {
+                        var entry = $(data),
+                                feed = $('<div>',{'class':'feed row'}),
+                                feedcol1 = $('<div>',{'class':'col-xs-2'}),
+                                feedcol2 = $('<div>',{'class':'col-xs-10'}),
+                                feedtitle = $('<div>',{'class':'title'}),
+                                feedmedia = $('<div>',{'class':'media'}),
+                                feedauthor = $('<div>',{'class':'author'}),
+                                feeddate = $('<div>',{'class':'date'});
+
+                        if(counter==2) feed.addClass('last');
+
+                        feed.append(feedcol1,feedcol2);
+                        feedcol1.append(feedmedia);
+                        feedcol2.append(feedtitle, feedauthor,feeddate);
+
+                        var link = $(data).find('link'),
+                            updated = $(data).find('updated');
+
+                        feeddate.text(updated.text());
+
+                        feedtitle.append($('<a>',{'target':'_blank','href':link.attr('href')}).text($(data).find('title').text()));
+
+                        var author = $(data).find('author'),
+                                name = author.find('name').text(),
+                                uri = author.find('uri').text();
+                        feedauthor.append($('<a>',{'target':'_blank','href':uri}).text(name));
+
+                        var thumb = $(data).find('thumbnail');
+                        feedmedia.append($('<img>',{'src':thumb.attr('url')}));
+
+                        $('#feed'+(counter+1)).html(feed);
+                    }
+                    ++counter;
+                });
+            }
+        });
+    });
+</script>
